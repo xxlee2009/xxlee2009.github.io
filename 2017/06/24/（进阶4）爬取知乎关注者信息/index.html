@@ -83,7 +83,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="xxlee2009, Python,English,note" />
+  <meta name="keywords" content="Python 总结 进阶," />
 
 
 
@@ -99,43 +99,16 @@
 
 
 
-<meta name="description" content="#coding = utf-8
-from bs4 import BeautifulSoup
-import requests
-import time
-import re
-from selenium import webdriver
-
-url = &amp;apos;http://www.zhihu.com&amp;apos;
-
-Cookie = &amp;apos;q_c1=814e40331b9b499998f73783">
+<meta name="description" content="通过爬虫爬取知乎关注者信息（姓名、头像、关注着数量、个性签名），使用selenium模拟用户登录。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="(进阶4）爬取知乎关注者信息.md">
+<meta property="og:title" content="(进阶4）爬取知乎关注者信息">
 <meta property="og:url" content="http://yoursite.com/2017/06/24/（进阶4）爬取知乎关注者信息/index.html">
 <meta property="og:site_name" content="xxlee'Study Notes">
-<meta property="og:description" content="#coding = utf-8
-from bs4 import BeautifulSoup
-import requests
-import time
-import re
-from selenium import webdriver
-
-url = &amp;apos;http://www.zhihu.com&amp;apos;
-
-Cookie = &amp;apos;q_c1=814e40331b9b499998f73783">
-<meta property="og:updated_time" content="2017-07-29T08:29:57.051Z">
+<meta property="og:description" content="通过爬虫爬取知乎关注者信息（姓名、头像、关注着数量、个性签名），使用selenium模拟用户登录。">
+<meta property="og:updated_time" content="2017-07-30T15:13:51.500Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="(进阶4）爬取知乎关注者信息.md">
-<meta name="twitter:description" content="#coding = utf-8
-from bs4 import BeautifulSoup
-import requests
-import time
-import re
-from selenium import webdriver
-
-url = &amp;apos;http://www.zhihu.com&amp;apos;
-
-Cookie = &amp;apos;q_c1=814e40331b9b499998f73783">
+<meta name="twitter:title" content="(进阶4）爬取知乎关注者信息">
+<meta name="twitter:description" content="通过爬虫爬取知乎关注者信息（姓名、头像、关注着数量、个性签名），使用selenium模拟用户登录。">
 
 
 
@@ -167,7 +140,7 @@ Cookie = &amp;apos;q_c1=814e40331b9b499998f73783">
 
 
 
-  <title> (进阶4）爬取知乎关注者信息.md | xxlee'Study Notes </title>
+  <title> (进阶4）爬取知乎关注者信息 | xxlee'Study Notes </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -337,7 +310,7 @@ Cookie = &amp;apos;q_c1=814e40331b9b499998f73783">
             
             
               
-                (进阶4）爬取知乎关注者信息.md
+                (进阶4）爬取知乎关注者信息
               
             
           </h1>
@@ -363,6 +336,28 @@ Cookie = &amp;apos;q_c1=814e40331b9b499998f73783">
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/总结-进阶/" itemprop="url" rel="index">
+                    <span itemprop="name">总结 进阶</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -380,7 +375,7 @@ Cookie = &amp;apos;q_c1=814e40331b9b499998f73783">
 
           
           
-             <span id="/2017/06/24/（进阶4）爬取知乎关注者信息/" class="leancloud_visitors" data-flag-title="(进阶4）爬取知乎关注者信息.md">
+             <span id="/2017/06/24/（进阶4）爬取知乎关注者信息/" class="leancloud_visitors" data-flag-title="(进阶4）爬取知乎关注者信息">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -409,7 +404,8 @@ Cookie = &amp;apos;q_c1=814e40331b9b499998f73783">
       
 
       
-        <pre><code>#coding = utf-8
+        <p>通过爬虫爬取知乎关注者信息（姓名、头像、关注着数量、个性签名），使用selenium模拟用户登录。<br><a id="more"></a></p>
+<pre><code>#coding = utf-8
 from bs4 import BeautifulSoup
 import requests
 import time
@@ -512,6 +508,12 @@ for name,word,img,cate in zip(names,words,imgs,cates):
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Python-总结-进阶/" rel="tag"># Python 总结 进阶</a>
+          
+        </div>
+      
 
       
         
@@ -521,8 +523,8 @@ for name,word,img,cate in zip(names,words,imgs,cates):
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/06/10/（进阶3）第一只爬虫程序/" rel="next" title="(进阶3）第一个爬虫程序.md">
-                <i class="fa fa-chevron-left"></i> (进阶3）第一个爬虫程序.md
+              <a href="/2017/06/10/（进阶3）第一只爬虫程序/" rel="next" title="(进阶3）第一个爬虫程序">
+                <i class="fa fa-chevron-left"></i> (进阶3）第一个爬虫程序
               </a>
             
           </div>
@@ -531,8 +533,8 @@ for name,word,img,cate in zip(names,words,imgs,cates):
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/07/01/（进阶5）第一只爬虫改进版/" rel="prev" title="(进阶5）第一只爬虫改进版.md">
-                (进阶5）第一只爬虫改进版.md <i class="fa fa-chevron-right"></i>
+              <a href="/2017/07/01/（进阶5）第一只爬虫改进版/" rel="prev" title="(进阶5）第一只爬虫改进版">
+                (进阶5）第一只爬虫改进版 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -560,7 +562,7 @@ for name,word,img,cate in zip(names,words,imgs,cates):
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2017/06/24/（进阶4）爬取知乎关注者信息/"
-           data-title="(进阶4）爬取知乎关注者信息.md" data-url="http://yoursite.com/2017/06/24/（进阶4）爬取知乎关注者信息/">
+           data-title="(进阶4）爬取知乎关注者信息" data-url="http://yoursite.com/2017/06/24/（进阶4）爬取知乎关注者信息/">
       </div>
     
   </div>
