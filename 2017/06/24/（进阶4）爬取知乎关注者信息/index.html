@@ -83,7 +83,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="blog 发布," />
+  <meta name="keywords" content="xxlee2009, Python,English,note" />
 
 
 
@@ -99,16 +99,43 @@
 
 
 
-<meta name="description" content="0. 写在前面前面两篇文章介绍了如何搭建、美化个人博客，本文将介绍如何推送文章。">
+<meta name="description" content="#coding = utf-8
+from bs4 import BeautifulSoup
+import requests
+import time
+import re
+from selenium import webdriver
+
+url = &amp;apos;http://www.zhihu.com&amp;apos;
+
+Cookie = &amp;apos;q_c1=814e40331b9b499998f73783">
 <meta property="og:type" content="article">
-<meta property="og:title" content="如何免费搭建属于自己的博客（三）">
-<meta property="og:url" content="http://yoursite.com/2017/03/25/如何免费搭建属于自己的博客（三）/index.html">
+<meta property="og:title" content="(进阶4）爬取知乎关注者信息.md">
+<meta property="og:url" content="http://yoursite.com/2017/06/24/（进阶4）爬取知乎关注者信息/index.html">
 <meta property="og:site_name" content="xxlee'Study Notes">
-<meta property="og:description" content="0. 写在前面前面两篇文章介绍了如何搭建、美化个人博客，本文将介绍如何推送文章。">
-<meta property="og:updated_time" content="2017-04-04T15:22:02.596Z">
+<meta property="og:description" content="#coding = utf-8
+from bs4 import BeautifulSoup
+import requests
+import time
+import re
+from selenium import webdriver
+
+url = &amp;apos;http://www.zhihu.com&amp;apos;
+
+Cookie = &amp;apos;q_c1=814e40331b9b499998f73783">
+<meta property="og:updated_time" content="2017-07-29T08:29:57.051Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="如何免费搭建属于自己的博客（三）">
-<meta name="twitter:description" content="0. 写在前面前面两篇文章介绍了如何搭建、美化个人博客，本文将介绍如何推送文章。">
+<meta name="twitter:title" content="(进阶4）爬取知乎关注者信息.md">
+<meta name="twitter:description" content="#coding = utf-8
+from bs4 import BeautifulSoup
+import requests
+import time
+import re
+from selenium import webdriver
+
+url = &amp;apos;http://www.zhihu.com&amp;apos;
+
+Cookie = &amp;apos;q_c1=814e40331b9b499998f73783">
 
 
 
@@ -140,7 +167,7 @@
 
 
 
-  <title> 如何免费搭建属于自己的博客（三） | xxlee'Study Notes </title>
+  <title> (进阶4）爬取知乎关注者信息.md | xxlee'Study Notes </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -289,7 +316,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/25/如何免费搭建属于自己的博客（三）/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/24/（进阶4）爬取知乎关注者信息/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="xxlee2009">
@@ -310,7 +337,7 @@
             
             
               
-                如何免费搭建属于自己的博客（三）
+                (进阶4）爬取知乎关注者信息.md
               
             
           </h1>
@@ -325,8 +352,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-25T21:54:00+08:00">
-                2017-03-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-24T22:13:01+08:00">
+                2017-06-24
               </time>
             
 
@@ -336,28 +363,6 @@
           </span>
 
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/总结/" itemprop="url" rel="index">
-                    <span itemprop="name">总结</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
             
@@ -366,8 +371,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/03/25/如何免费搭建属于自己的博客（三）/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/25/如何免费搭建属于自己的博客（三）/" itemprop="commentCount"></span>
+                <a href="/2017/06/24/（进阶4）爬取知乎关注者信息/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/06/24/（进阶4）爬取知乎关注者信息/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -375,7 +380,7 @@
 
           
           
-             <span id="/2017/03/25/如何免费搭建属于自己的博客（三）/" class="leancloud_visitors" data-flag-title="如何免费搭建属于自己的博客（三）">
+             <span id="/2017/06/24/（进阶4）爬取知乎关注者信息/" class="leancloud_visitors" data-flag-title="(进阶4）爬取知乎关注者信息.md">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -404,43 +409,73 @@
       
 
       
-        <h1 id="0-写在前面"><a href="#0-写在前面" class="headerlink" title="0. 写在前面"></a>0. 写在前面</h1><p>前面两篇文章介绍了如何搭建、美化个人博客，本文将介绍如何推送文章。<br><a id="more"></a></p>
-<h1 id="1-创建博客文件"><a href="#1-创建博客文件" class="headerlink" title="1. 创建博客文件"></a>1. 创建博客文件</h1><pre><code>hexo new &apos;文章标题&apos;
-INFO  Created: D:\test\blog\source\_posts\文章标题.md
-</code></pre><p>在blog\source_posts下会创建一个 .md 的文件。</p>
-<h1 id="2-Markdown"><a href="#2-Markdown" class="headerlink" title="2. Markdown"></a>2. Markdown</h1><p>下载并安装<a href="http://markdownpad.com/" target="_blank" rel="external">Markdown</a>，以下是常用的语法。</p>
-<h2 id="2-1-标题"><a href="#2-1-标题" class="headerlink" title="2.1 标题"></a>2.1 标题</h2><pre><code># 1 header1       1级标题
-## 1.1 header2    2级标题
-</code></pre><p>注意：#、1、标题 中间有1各空格。</p>
-<h2 id="2-2-引用"><a href="#2-2-引用" class="headerlink" title="2.2 引用"></a>2.2 引用</h2><pre><code>&gt; 引用内容
-</code></pre><p>例如：</p>
-<blockquote>
-<p>hello world!</p>
-</blockquote>
-<h2 id="2-3-强调"><a href="#2-3-强调" class="headerlink" title="2.3 强调"></a>2.3 强调</h2><pre><code>*强调内容  斜体*或_强调内容_
-**强调内容  粗体**或__强调内容__
-***强调内容  粗斜体***或___强调内容___
-</code></pre><h2 id="2-4-链接"><a href="#2-4-链接" class="headerlink" title="2.4 链接"></a>2.4 链接</h2><pre><code>[链接文字](链接地址 &apos;描述&apos;)
-</code></pre><p>例如：</p>
-<pre><code>[hexo官方文档](https://hexo.io/zh-cn/docs/ &apos;中文传送门&apos;)
-</code></pre><h2 id="2-5-图片"><a href="#2-5-图片" class="headerlink" title="2.5 图片"></a>2.5 图片</h2><pre><code>![alt text](地址 &apos;描述&apos;)    
-</code></pre><p>例如：</p>
-<pre><code>![alt text](http://omv0gy6lh.bkt.clouddn.com/%E5%A4%B4%E5%83%8F.PNG)
-</code></pre><p>以上就是Markdown的基本使用方法，在Markdown中写好内容并保存。</p>
-<h1 id="3-推送文章"><a href="#3-推送文章" class="headerlink" title="3. 推送文章"></a>3. 推送文章</h1><p>在发布新博客前，现在使用本地网页预览：</p>
-<pre><code>hexo clean
-hexo g
-hexo s
+        <pre><code>#coding = utf-8
+from bs4 import BeautifulSoup
+import requests
+import time
+import re
+from selenium import webdriver
 
-INFO  Start processing
-INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.
-</code></pre><p>在<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>中预览新发布的博客。</p>
-<p>确认无误后，使用hexo命令发布到网上：</p>
-<pre><code>hexo deploy
-</code></pre><p>你就可以看到文章发布到博客中。</p>
-<p><strong><em>以上就是”如何免费搭建属于自己的博客”的全部内容，如有疑问，欢迎留言。</em></strong></p>
-<p><strong><em>后续文章是对Python学习的总结。</em></strong></p>
+url = &apos;http://www.zhihu.com&apos;
 
+Cookie = &apos;q_c1=814e40331b9b499998f737837e1cf74c|1496067663000|1496067663000; _xsrf=10e3759cb478104b7afa0ce39b2cd442; r_cap_id=&quot;OTljNDAxMGNmOTNkNDY5NmE3NzlhZTg4ZWM1YjhmNzI=|1497277004|5d433bfedd48655844717bac52015f11c27c3a16&quot;; cap_id=&quot;YTY1ZmI0YTdmOTA5NGVlMGJkODYwMGM5OTViMjA4M2I=|1497277004|90d1be5ca185a926f6549514a68b5a03a4768f95&quot;; d_c0=&quot;AIACJCs-5wuPTv8aQaGLb8AH9BrsPgq2uE0=|1497277005&quot;; _zap=2538d69f-9b14-4f4e-8fce-99685b63a93b; l_n_c=1; z_c0=Mi4wQUJES25ZQU5SUWdBZ0FJa0t6N25DeGNBQUFCaEFsVk5oQzltV1FEVEZfZ05CTTEwZWVFbEh4SmlPZWZPUzYtZ3Rn|1497282685|9b2766b40c3764431875163ff888f1309f22abc4; __utma=51854390.3691631.1497282508.1497282508.1497282508.1; __utmb=51854390.0.10.1497282508; __utmc=51854390; __utmz=51854390.1497282508.2.1.utmcsr=zhihu.com|utmccn=(referral)|utmcmd=referral|utmcct=/people/xx-lee-21-2/following; __utmv=51854390.110-1|2=registration_date=20150621=1^2=entry_date=20150621=1&apos;
+
+headers = {&apos;Cookie&apos;:Cookie,&apos;User-Agent&apos;:&apos;Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1&apos;}
+
+
+#模拟手机登录
+mobileEmulation = {&apos;deviceName&apos;: &apos;iPhone 6 Plus&apos;}
+options = webdriver.ChromeOptions()
+options.add_experimental_option(&apos;mobileEmulation&apos;, mobileEmulation)
+driver = webdriver.Chrome(chrome_options = options)
+
+
+#登录知乎
+driver.get(url)
+
+time.sleep(2)                            #让操作稍微停一下
+driver.find_element_by_link_text(&apos;登录&apos;).click() #找到‘登录’按钮并点击
+time.sleep(2)
+#找到输入账号的框，并自动输入账号 这里要替换为你的登录账号
+driver.find_element_by_name(&apos;account&apos;).send_keys(&apos;1500181***&apos;)
+time.sleep(2)
+#密码，这里要替换为你的密码
+driver.find_element_by_name(&apos;password&apos;).send_keys(&apos;1991***&apos;)
+time.sleep(2)
+#输入浏览器中显示的验证码，这里如果知乎让你找烦人的倒立汉字，手动登录一下，再停止程序，退出#浏览器，然后重新启动程序，直到让你输入验证码
+yanzhengma=input(&apos;验证码:&apos;)
+driver.find_element_by_name(&apos;captcha&apos;).send_keys(yanzhengma)
+#找到登录按钮，并点击
+driver.find_element_by_css_selector(&apos;div.button-wrapper.command &gt; button&apos;).click()
+time.sleep(2)
+cookie=driver.get_cookies()
+time.sleep(3)
+for i in range(5):
+    driver.execute_script(&quot;document.documentElement.scrollTop=10000&quot;)
+    time.sleep(2)
+
+
+
+#爬取数据
+web_data = requests.get(&apos;https://www.zhihu.com/people/xx-lee-21-2/followees&apos;,headers=headers)
+soup = BeautifulSoup(web_data.text,&apos;lxml&apos;)
+
+names = soup.select(&apos;a.zg-link.author-link&apos;)
+words = soup.select(&apos;.bio&apos;)
+imgs = soup.select(&apos;.zm-item-img-avatar&apos;)
+cates = soup.find_all(class_=&apos;zg-link-gray-normal&apos;,href = re.compile(&apos;followers&apos;))
+
+# pprint.pprint(cates)
+
+for name,word,img,cate in zip(names,words,imgs,cates):
+    data = {
+        &apos;name&apos;:name.get_text(),
+        &apos;word&apos;:word.get_text(),
+        &apos;img&apos;:img.get(&apos;src&apos;),
+        &apos;cate&apos;:cate.get_text(),
+    }
+    print(data)
+</code></pre>
       
     </div>
 
@@ -477,12 +512,6 @@ INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/blog-发布/" rel="tag"># blog 发布</a>
-          
-        </div>
-      
 
       
         
@@ -492,8 +521,8 @@ INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/18/如何免费搭建属于自己的博客（二）/" rel="next" title="如何免费搭建属于自己的博客（二）">
-                <i class="fa fa-chevron-left"></i> 如何免费搭建属于自己的博客（二）
+              <a href="/2017/06/10/（进阶3）第一只爬虫程序/" rel="next" title="(进阶3）第一个爬虫程序.md">
+                <i class="fa fa-chevron-left"></i> (进阶3）第一个爬虫程序.md
               </a>
             
           </div>
@@ -502,8 +531,8 @@ INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/28/Python基础总结/" rel="prev" title="Python基础总结">
-                Python基础总结 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/07/01/（进阶5）第一只爬虫改进版/" rel="prev" title="(进阶5）第一只爬虫改进版.md">
+                (进阶5）第一只爬虫改进版.md <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -530,8 +559,8 @@ INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/03/25/如何免费搭建属于自己的博客（三）/"
-           data-title="如何免费搭建属于自己的博客（三）" data-url="http://yoursite.com/2017/03/25/如何免费搭建属于自己的博客（三）/">
+      <div class="ds-thread" data-thread-key="2017/06/24/（进阶4）爬取知乎关注者信息/"
+           data-title="(进阶4）爬取知乎关注者信息.md" data-url="http://yoursite.com/2017/06/24/（进阶4）爬取知乎关注者信息/">
       </div>
     
   </div>
@@ -555,17 +584,8 @@ INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/touxiang.jpg"
@@ -664,22 +684,6 @@ INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0-写在前面"><span class="nav-number">1.</span> <span class="nav-text">0. 写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-创建博客文件"><span class="nav-number">2.</span> <span class="nav-text">1. 创建博客文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Markdown"><span class="nav-number">3.</span> <span class="nav-text">2. Markdown</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-标题"><span class="nav-number">3.1.</span> <span class="nav-text">2.1 标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-引用"><span class="nav-number">3.2.</span> <span class="nav-text">2.2 引用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-强调"><span class="nav-number">3.3.</span> <span class="nav-text">2.3 强调</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-链接"><span class="nav-number">3.4.</span> <span class="nav-text">2.4 链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-图片"><span class="nav-number">3.5.</span> <span class="nav-text">2.5 图片</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-推送文章"><span class="nav-number">4.</span> <span class="nav-text">3. 推送文章</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       

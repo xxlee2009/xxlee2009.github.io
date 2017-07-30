@@ -1,0 +1,1444 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Python 总结," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="0. 写在前面没有输出的输入，只能算是知识的囤积。
+学习《Python快速上手 让繁琐工作自动化》的总结。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python基础总结">
+<meta property="og:url" content="http://yoursite.com/2017/04/28/Python基础总结/index.html">
+<meta property="og:site_name" content="xxlee'Study Notes">
+<meta property="og:description" content="0. 写在前面没有输出的输入，只能算是知识的囤积。
+学习《Python快速上手 让繁琐工作自动化》的总结。">
+<meta property="og:updated_time" content="2017-07-29T07:13:05.450Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python基础总结">
+<meta name="twitter:description" content="0. 写在前面没有输出的输入，只能算是知识的囤积。
+学习《Python快速上手 让繁琐工作自动化》的总结。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 'xxlee2009',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: "",
+      labels: ""
+    }
+  };
+</script>
+
+
+
+
+
+
+
+  <title> Python基础总结 | xxlee'Study Notes </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?767db4ee1769de108fba6ac84b763cf3";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">xxlee'Study Notes</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">无他，唯手熟尔。</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/28/Python基础总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xxlee2009">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="xxlee'Study Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Python基础总结
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-28T20:28:49+08:00">
+                2017-04-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/总结/" itemprop="url" rel="index">
+                    <span itemprop="name">总结</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/04/28/Python基础总结/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/28/Python基础总结/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/04/28/Python基础总结/" class="leancloud_visitors" data-flag-title="Python基础总结">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="0-写在前面"><a href="#0-写在前面" class="headerlink" title="0. 写在前面"></a>0. 写在前面</h1><p>没有输出的输入，只能算是知识的囤积。</p>
+<p>学习《Python快速上手 让繁琐工作自动化》的总结。</p>
+<a id="more"></a>
+<h1 id="1-基础"><a href="#1-基础" class="headerlink" title="1. 基础"></a>1. 基础</h1><p>1.1 数学操作符</p>
+<pre><code>加：+      
+减：-  
+乘：*  
+除：/
+指数：**  
+取余：%  
+整除：//
+
+注意：&apos;**&apos;优先级最高，其次是&apos;*&apos;、&apos;/&apos;、&apos;//&apos;、&apos;%&apos;，从左往右，最后是&apos;+&apos;、&apos;-&apos;。
+</code></pre><p>1.2 数据类型</p>
+<pre><code>整型：int
+浮点型：float
+字符串：strs
+</code></pre><p>1.3 字符串的连接和复制</p>
+<pre><code>连接：使用&apos;+&apos;      如：&apos;hello&apos; + &apos;world&apos;
+复制：使用&apos;*&apos;      如：&apos;-&apos; * 30
+</code></pre><p>1.4 在变量中保存值</p>
+<p>变量就像是计算机内存中的一个盒子。</p>
+<pre><code>赋值语句：变量名 赋值操作符（&apos;=&apos;） 储存的值
+变量名：a.只能是一个词  b.包含数字、字母、下划线 c.不能以数字开头
+驼峰：helloWorld
+</code></pre><p>1.5 其他</p>
+<pre><code>单行注释：#
+多行注释：&apos;&apos;&apos; &apos;&apos;&apos;
+输入：input()
+输出：print()
+字符串中字符个数：len()
+数据类型转换：str()  int()  float()
+</code></pre><p>1.6 项目：简易计算器</p>
+<pre><code>&apos;&apos;&apos;
+两位数加减乘除
+首先是欢迎界面
+&apos;&apos;&apos;
+print(&apos;=&apos;*43)
+print(&apos;Welcome!Please choose the function!&apos;)
+print(&apos;1.ADD 2.SUBTRACT 3.MULTIPLY 4.DIVIDE 5.EXIT&apos;)
+print(&apos;=&apos;*43)
+
+while True:    #通过while循环实现多次计算
+    choose = input(&apos;The number you choose is:&apos;)
+    if choose.isdigit():#判断输入是否符合要求
+        choose = int(choose)#若输入为数字，则将str转换成int
+
+        if choose == 1:#add
+            the_first_number = float(input(&apos;Please input the first number:&apos;))
+            the_second_number = float(input(&apos;Please input the second number:&apos;))
+            add_answer = the_first_number + the_second_number
+            print(&apos;The answer is:%r&apos;%add_answer)
+
+        elif choose == 2:#subtract    
+            the_first_number = float(input(&apos;Please input the first number:&apos;))
+            the_second_number = float(input(&apos;Please input the second number:&apos;))
+            subtract_answer = the_first_number - the_second_number
+            print(&apos;The answer is:%r&apos;%subtract_answer)
+
+        elif choose == 3:#multiply        
+            the_first_number = float(input(&apos;Please input the first number:&apos;))
+            the_second_number = float(input(&apos;Please input the second number:&apos;))
+            multiply_answer = the_first_number * the_second_number
+            print(&apos;The answer is:%r&apos;%multiply_answer)
+
+        elif choose == 4:#divide    
+            the_first_number = float(input(&apos;Please input the first number:&apos;))
+            the_second_number = float(input(&apos;Please input the second number:&apos;))
+            if the_second_number == 0:#0不能做被除数
+                print(&apos;The second number should\&apos;t be zero!&apos;)
+            else:
+                divide_answer = the_first_number / the_second_number
+                print(&apos;The divide answer is:%r&apos;%divide_answer)
+
+        elif choose == 5:#exit
+            print(&apos;EXIT!\nSee U next time!&apos;)
+            break
+        else:#Exceptions
+            print(&apos;Your number is out of 1 to 5.\nPlease input the right number.&apos;)
+    else:#Exceptions
+        print(&apos;Someting is wrong!\nPlease input the right number!&apos;)
+        continue 
+</code></pre><h1 id="2-控制流"><a href="#2-控制流" class="headerlink" title="2. 控制流"></a>2. 控制流</h1><p>程序不仅仅是简单的执行一行代码，而是根据表达式求值结果，决定在什么条件下执行哪些Python命令。</p>
+<p>2.1 布尔值</p>
+<pre><code>只有两种：True False
+</code></pre><p>2.2 比较操作符</p>
+<pre><code>等于：==    注：和赋值操作符&apos;=&apos;不同
+不等于：!=
+大于：&gt;
+小于：&lt;
+大于等于：&gt;=
+小于等于：&lt;=
+</code></pre><p>求值结果为：True False</p>
+<p>2.3 布尔操作符</p>
+<pre><code>and  or  not
+</code></pre><p>Python先求值not，然后是and，最后是or。</p>
+<p>2.4 控制流元素</p>
+<p>开始是一个判断语句（’条件’），接下来是一个代码块（’子块’）。</p>
+<p>2.5 控制流语句</p>
+<p>2.5.1 if、elif、else</p>
+<pre><code>if 条件：
+    子块
+elif 条件：
+    子块
+else：
+    子块
+</code></pre><p>2.5.2 while循环</p>
+<pre><code>while 条件：
+    子块
+</code></pre><p>2.5.3 break语句、continue语句</p>
+<p>程序执行遇到break马上退出while语句。执行遇到continue语句，会马上跳到循环开始处，重新对循环条件求值。</p>
+<p>例如：输入名字和口令</p>
+<pre><code>while True:                 #while循环
+    yourName = &apos;lee&apos;
+    yourPassword = &apos;12345&apos;
+    name = input(&apos;What is your name?&apos;)
+    if name != yourName:
+        print(&apos;Wrong,please input your right name.&apos;)
+        continue            #continue语句
+    print(&apos;Hello lee,please input your password.&apos;)
+    password = input()
+    if password == yourPassword:
+        break               #break语句
+print(&apos;Access granted.&apos;)
+</code></pre><p>2.5.4 for循环、range()函数</p>
+<p>for循环、range()函数可以让代码块执行固定次数。</p>
+<p>例如：高斯算数</p>
+<pre><code>total = 0
+for num in range(101):
+    total += num
+print(total)
+</code></pre><p>range(起始值，终止值，步长)</p>
+<p>2.5.5 等价的while循环</p>
+<p>while循环也可以和for循环一样，执行固定次数。</p>
+<pre><code>i = 0
+while i &lt; 5:
+    print(&apos;hello world&apos;)
+    i += 1
+</code></pre><p>注意：break、continue语句仅适用于while、for循环中。</p>
+<p>2.5.6 导入模块</p>
+<p>内建函数：如print()函数<br>标准库：每个模块都是一个程序，包含一组相关函数，使用import导入该模块。</p>
+<pre><code>import random
+
+random.randint(1,5)
+</code></pre><p>from import语句</p>
+<pre><code>from random import *
+</code></pre><p>使用这种形式的import，调用random中的函数，不需要使用random.前缀。为了代码可读性，最好使用普通形式的import语句。</p>
+<p>2.5.7 用sys.exit()提前终止程序</p>
+<pre><code>import sys
+while True:
+    response = input()
+    if response == &apos;exit&apos;:
+        break               #print()还要执行
+
+        #sys.exit()            #print()不执行
+
+print(response)
+</code></pre><h1 id="3-函数"><a href="#3-函数" class="headerlink" title="3. 函数"></a>3. 函数</h1><p>函数就像是程序内的小程序。</p>
+<p>3.1 def语句和参数</p>
+<p>可以消除重复，使程序更短、更易读、更容易更新。</p>
+<pre><code>def 函数名（参数）：
+    子块
+</code></pre><p>3.2 返回值和return语句</p>
+<p>函数调用求值的结果，叫做返回值。</p>
+<pre><code>return 函数应该返回的值或表达式
+</code></pre><p>3.3 None值</p>
+<p>表示没有值，是NoneType数据类型的唯一值。</p>
+<p>3.4 关键字参数和print()</p>
+<p>print()函数可选的变元有end、sep，分别指定在参数末尾打印什么，和在参数之间打印什么来隔开他们。</p>
+<p>例如：</p>
+<pre><code>print(&apos;hello&apos;,end=&apos;&apos;)
+print(&apos;world&apos;)
+</code></pre><p>运行结果为：</p>
+<pre><code>helloworld
+</code></pre><p>例如：<br>    print(‘a’,’b’,’c’，sep=’,’)</p>
+<pre><code>a,b,c
+</code></pre><p>3.5 局部和全局作用域</p>
+<p>在被调用函数内赋值的变元和变量，处于该函数的“局部作用域”，称为“局部变量”。</p>
+<p>在函数之外赋值的变量，属于“全局作用域”，称为“全局变量”。</p>
+<p>注意：<br>a.局部变量不能在全局作用域内使用<br>b.局部作用域不能使用其他局部作用域内的变量<br>c.全局变量可以在局部作用域中读取<br>d.技术上来讲，局部变量可以和全局变量名称相同</p>
+<p>3.6 global语句</p>
+<p>如果需要在函数内修改全局变量，使用global语句。</p>
+<pre><code>global 变量名
+</code></pre><p>3.7 异常处理</p>
+<pre><code>try：
+    子块
+
+except 错误：
+    子块
+</code></pre><p>3.8 项目1：猜数字</p>
+<p>No.1</p>
+<pre><code>import random
+number = random.randint(1,20)
+i = 1
+
+while True:    
+    if i &lt; 7:
+        guessNumber = int(input(&apos;Guess a number between 1 to 20:&apos;))
+        if guessNumber == number:
+            print(&apos;You take %d times to guess the right number.&apos;%i)
+            exit()
+        elif guessNumber &gt; number:
+            print(&apos;Too big.Try again.&apos;)
+        elif guessNumber &lt; number:
+            print(&apos;Too low.Try again.&apos;)
+
+    else:
+        print(&apos;Times out.&apos;)
+        break
+    i += 1
+</code></pre><p>No.2</p>
+<pre><code>import random
+number = random.randint(1,20)
+
+
+for i in range(1,7):
+    guessNumber = int(input(&apos;Guess a number between 1 to 20:&apos;))
+    if guessNumber &gt; number:
+        print(&apos;Too big.Try again.&apos;)
+    elif guessNumber &lt; number:
+        print(&apos;Too low.Try again.&apos;)
+    else:
+        break
+
+if guessNumber == number:
+    print(&apos;Right in &apos; + str(i) +&apos; times.&apos;)
+else:
+    print(&apos;The number is &apos; + str(number) +&apos;.&apos;)
+</code></pre><p>3.9 项目2：collatz序列</p>
+<pre><code>#coding = utf-8
+def collatz():   #定义collatz函数
+    global num   #num为全局变量，故在函数内修改全局变量，需使用global
+    if num%2 == 0:
+        num //= 2
+        print(num)
+        return num
+    else:
+        num = num*3 + 1
+        print(num)
+        return num
+
+#输入
+num = input(&apos;请输入一个正整数：&apos;)
+
+#异常处理
+try:              
+    num = int(num)
+    while num != 1:
+        collatz()
+
+    print(&apos;num=%d&apos;%num)
+
+except ValueError: 
+    print(&apos;请输入正确的值。&apos;)
+</code></pre><h1 id="4-列表"><a href="#4-列表" class="headerlink" title="4. 列表"></a>4. 列表</h1><p>4.1 列表数据类型</p>
+<p>列表是一个值，它包含多个字构成的序列，’[]’。</p>
+<p>使用下标可以取得列表的值，如：egg[1]。第一个值下标为0，第二个为1，以此类推。</p>
+<p>负数下标表示从后往前数，-1表示列表最后一个下标，以此类推。</p>
+<p>可以利用切片取得子列表，从第一个下标开始，到第二个下标结束，不包括第二个下标的值，如egg[1,3]，取得egg[1]、egg[2]，但不包含egg[3]。</p>
+<p>可以使用len()函数返回列表值的个数。</p>
+<p>列表的增、删、改、查：</p>
+<pre><code>增：append()方法  insert()方法
+删：del语句 pop()  如：del egg[1]
+改：egg[1] = 2
+查：index()方法  如：egg.index(&apos;1&apos;)
+</code></pre><p>列表的连接和复制：</p>
+<pre><code>连接：&apos;+&apos;
+复制：&apos;*&apos;
+</code></pre><p>4.2 使用列表</p>
+<p>列表可用于循环。</p>
+<pre><code>for i in [1,2,3]:
+    print(i)
+</code></pre><p>in和not in操作符：</p>
+<pre><code>&apos;1&apos; in [&apos;1&apos;,&apos;2&apos;,&apos;3&apos;]
+</code></pre><p>多重赋值：是一种快捷方式，可以在一行代码中，用列表中的值为多个变量赋值。</p>
+<pre><code>cat = [&apos;fat&apos;,&apos;black&apos;,&apos;loud&apos;]
+size,color,disposition = cat
+</code></pre><p>4.3 增强的赋值操作</p>
+<pre><code>+=
+-=
+*=
+/=
+</code></pre><p>4.4 方法</p>
+<p>方法和函数是一回事，只不过方法是调用在一个值上。如：egg.index(‘1’)，方法部分跟在值后面，以一个句点（.）隔开。</p>
+<p>如：</p>
+<pre><code>增：append()方法  insert()方法
+删：remove()方法，第一次出现的值会被删除  
+查：index()方法，返回值的下标  如：egg.index(&apos;1&apos;)
+排序：sort()方法  如：egg.sort() egg.sort(reverse=True)逆序排序
+</code></pre><p>4.5 类似列表的类型：字符串和元组</p>
+<p>字符串和元组是不可变的，列表是可变的。</p>
+<p>用list()、tuple()函数来转换类型。</p>
+<p>4.6 引用</p>
+<pre><code>a = [1,2,3]
+b = a
+b[0] = 0
+a
+b
+</code></pre><p>输出为：</p>
+<pre><code>[0,2,3]
+[0,2,3]
+</code></pre><p>变量不保存列表，它保存的是对列表的<strong>引用</strong>。</p>
+<p>b = a是指b复制了a的引用，<strong>a、b指向同一个列表</strong>，修改b，实际上是修改了a、b引用的列表。</p>
+<p>传递引用：函数调用列表作为参数时，是对列表的引用。</p>
+<p>copy模块的copy()和deepcopy()函数：</p>
+<p>copy.copy()可以复制列表或字典这样的可变值，而不是复制引用。</p>
+<p>例如：</p>
+<pre><code>import copy
+a = [1,2,3]
+b = copy.copy(a)
+b[0] = 0
+a
+b
+</code></pre><p>输出：</p>
+<pre><code>[1,2,3]
+[0,2,3]
+</code></pre><p>若要复制的列表中包含了列表，那就要用copy.deepcopy()函数来代替。</p>
+<p>4.7 项目1：逗号代码</p>
+<p>对于任意的列表，可改成一行字符串，最后一位值为’and+变量’</p>
+<pre><code>a = [&apos;2&apos;,&apos;4&apos;,&apos;d&apos;,1]
+a[-1] = &apos;and &apos; +str(a[-1])  #修改最后一位为&apos;and+变量&apos;&apos;
+i = 0
+while i &lt; len(a)-1:
+    print(a[i],end=&apos;,&apos;)
+    i += 1
+print(a[-1]) #最后一位后无&apos;,&apos;
+</code></pre><p>4.8 项目2：字符图网格</p>
+<pre><code>grid = [[&apos;1&apos;,&apos;2&apos;,&apos;3&apos;,&apos;4&apos;],
+        [&apos;1&apos;,&apos;2&apos;,&apos;3&apos;,&apos;4&apos;],
+        [&apos;1&apos;,&apos;2&apos;,&apos;3&apos;,&apos;4&apos;],
+        [&apos;1&apos;,&apos;2&apos;,&apos;3&apos;,&apos;4&apos;]]
+
+#grid[i][j]
+#循环嵌套
+for j in range(0,4):
+    for i in range(0,4):
+        if i == 3:
+            print(grid[i][j])
+        else:
+            print(grid[i][j],end = &apos;&apos;)
+</code></pre><h1 id="5-字典和结构化数据"><a href="#5-字典和结构化数据" class="headerlink" title="5. 字典和结构化数据"></a>5. 字典和结构化数据</h1><p>5.1 字典数据类型</p>
+<p>字典的索引被称为’键’，键及其关联的值称为’键-值’对。  ‘key-value’</p>
+<p>例如：</p>
+<pre><code>myCat = {&apos;size&apos;:&apos;fat&apos;,&apos;color&apos;:&apos;black&apos;,&apos;disposition&apos;:&apos;loud&apos;}
+
+myCat[size]
+
+输出：
+
+fat
+</code></pre><p>字典是不排序的，所以无法像列表一样切片。若访问不存在的值，就会导致KeyError错误。</p>
+<p>字典的三个方法：key()、value()、item()，分别对应键、值、键-值对。这些方法返回的数据类型不是列表，分别是dict_keys、dict_values、dict_items。但这些返回值可用于for循环。注意：item()返回的是包含键值的元组。</p>
+<p>若需要检查字典中是否存在键或值，用in和not in。</p>
+<p>get()方法：get(键，备用值)。若字典中不存在该键，则返回备用值。</p>
+<p>setdefault()方法：为字典中某一键设置默认值，当该键没有任何值时使用。</p>
+<p>5.2 漂亮打印</p>
+<pre><code>import pprint
+pprint.pprint（）
+</code></pre><p>若想得到漂亮打印的文本，而不是显示在屏幕上，可用pprint.pformat()。</p>
+<h1 id="6-字符串操作"><a href="#6-字符串操作" class="headerlink" title="6. 字符串操作"></a>6. 字符串操作</h1><p>6.1 处理字符串</p>
+<p>如何在字符串中输入单引号、制表符或换行？</p>
+<pre><code>a）用双引号开始和结束；
+
+b）使用转移字符&apos;\&apos;
+
+c）原始字符串&apos;r&apos;：在字符串前加r
+
+d）用三重引号的多行字符串
+</code></pre><p>字符串和列表一样，都可以使用下标和切片。</p>
+<p>和列表一样，字符串可以使用in和not in操作符。</p>
+<p>6.2 有用的字符串方法</p>
+<p>6.2.1 字符串方法upper()、lower()、isupper()、islower()</p>
+<p>upper()、lower()方法返回一个新的字符串，原字符串中所有字母都相应转换成大写或小写，非字母字符保持不变。请注意，此方法并没有改变原有字符串，而是返回一个新的字符串。</p>
+<p>6.2.2 isX字符串方法：用来验证用户输入</p>
+<p>isalpha()：返回True，表示只包含字母，且非空；</p>
+<p>isalnum()：返回True，表示只包含字母和数字，且非空；</p>
+<p>isdecimal()：返回True，表示只包含数字字符，且非空；</p>
+<p>isspace()：返回True，表示只包含空格、制表符和换行，且非空；</p>
+<p>istitle()：返回True，表示字符串仅包含以大写字母开头，口面都是小写字母的单词。</p>
+<p>6.2.3 字符串方法startswith()和endswith()</p>
+<p>startswith()和endswith()方法返回True，若所调用的字符串以该方法传入的字符串开始或结束。</p>
+<p>6.2.4 字符串方法join()和split()</p>
+<p>join()方法在一个字符串上调用，参数是一个字符串列表，返回一个字符串，返回的字符串由输入的列表中每个字符串连接而成。</p>
+<pre><code>&apos; &apos;.join([&apos;My&apos;,&apos;name&apos;,&apos;is&apos;,&apos;xxlee&apos;])
+
+&apos;调用方法的字符串&apos;.方法(参数列表)
+</code></pre><p>输出：</p>
+<pre><code>&apos;My name is xxlee&apos;
+</code></pre><p>split()方法针对一个字符串调用，返回一个字符串列表。</p>
+<p>6.2.5 用rjust()、ljust()和center（）方法对齐文本</p>
+<p>rjust()、ljust()字符串方法返回调用它们的字符串的填充版本，通过插入空格来对齐文本。第一个参数是一个整数长度，第二个参数是填充字符。</p>
+<p>center()字符串方法类似，让文本居中。</p>
+<pre><code>&apos;hello&apos;.rjust(20,&apos;#&apos;)
+</code></pre><p>输出：</p>
+<pre><code>&apos;###############hello&apos;
+</code></pre><p>例：</p>
+<pre><code>def printPicnic(item,left,right):
+    print(&apos;PICNIC ITEMS&apos;.center(left + right,&apos;-&apos;))
+    for k,v in item.items():
+        print(k.ljust(left,&apos;.&apos;)+str(v).rjust(right))
+
+a = {&apos;s&apos;:3,&apos;b&apos;:4333}
+
+printPicnic(a,12,4)
+</code></pre><p>输出：</p>
+<pre><code>--PICNIC ITEMS--
+s...........   3
+b...........4333
+</code></pre><p>6.2.6 用strip()、rstrip()和lstrip()删除空白字符</p>
+<p>strip()字符串方法将返回一个新的字符串，它开头或末尾都没有空白字符。lstrip()和rstrip()方法将相应删除左边或右边的空白字符。</p>
+<p>也可向strip()、rstrip()和lstrip()传入可选的字符串参数，可删除相应的字符，传入的字符顺序并不重要。</p>
+<p>6.2.7 用pyperclip模块拷贝粘贴字符串</p>
+<p>pyperclip模块中有copy()和paste()函数，可以向计算机的剪贴板发送文本，或接收文本。</p>
+<p>6.3 项目：口令保管箱</p>
+<pre><code>略
+</code></pre><p><strong><em>基础部分结束</em></strong></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/weichat.png" alt="xxlee2009 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Python-总结/" rel="tag"># Python 总结</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/25/如何免费搭建属于自己的博客（三）/" rel="next" title="如何免费搭建属于自己的博客（三）">
+                <i class="fa fa-chevron-left"></i> 如何免费搭建属于自己的博客（三）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/05/13/（进阶1）正则表达式/" rel="prev" title="（进阶1）正则表达式.md">
+                （进阶1）正则表达式.md <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/04/28/Python基础总结/"
+           data-title="Python基础总结" data-url="http://yoursite.com/2017/04/28/Python基础总结/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/touxiang.jpg"
+               alt="xxlee2009" />
+          <p class="site-author-name" itemprop="name">xxlee2009</p>
+           
+              <p class="site-description motion-element" itemprop="description">Python/English</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/xxlee2009" target="_blank" title="技术-GitHub">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  技术-GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/xx-lee-21-2" target="_blank" title="感悟-知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  感悟-知乎
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Search
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://baidu.com" title="度娘" target="_blank">度娘</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=242 src="//music.163.com/outchain/player?type=0&id=628007329&auto=0&height=430"></iframe>
+
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0-写在前面"><span class="nav-number">1.</span> <span class="nav-text">0. 写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-基础"><span class="nav-number">2.</span> <span class="nav-text">1. 基础</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-控制流"><span class="nav-number">3.</span> <span class="nav-text">2. 控制流</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-函数"><span class="nav-number">4.</span> <span class="nav-text">3. 函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-列表"><span class="nav-number">5.</span> <span class="nav-text">4. 列表</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-字典和结构化数据"><span class="nav-number">6.</span> <span class="nav-text">5. 字典和结构化数据</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-字符串操作"><span class="nav-number">7.</span> <span class="nav-text">6. 字符串操作</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+一共来了 <span id="busuanzi_value_site_pv"></span> 位朋友啦
+您是xxlee的第<span id="busuanzi_value_site_uv"></span>个小伙伴.^_^
+
+
+<div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xxlee2009</span>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"xxlee2009"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("xR8KKKjk3aioLmuBeDeQTYDs-gzGzoHsz", "leXEXmGT51aeIezOmaoEo4Lp");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+
+  
+
+<!-- custom analytics part create by xiamo -->
+<script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+<script>AV.initialize("xR8KKKjk3aioLmuBeDeQTYDs-gzGzoHsz", "leXEXmGT51aeIezOmaoEo4Lp");</script>
+<script>
+function showTime(Counter) {
+	var query = new AV.Query(Counter);
+	$(".leancloud_visitors").each(function() {
+		var url = $(this).attr("id").trim();
+		query.equalTo("url", url);
+		query.find({
+			success: function(results) {
+				if (results.length == 0) {
+					var content = '0 ' + $(document.getElementById(url)).text();
+					$(document.getElementById(url)).text(content);
+					return;
+				}
+				for (var i = 0; i < results.length; i++) {
+					var object = results[i];
+					var content = object.get('time') + ' ' + $(document.getElementById(url)).text();
+					$(document.getElementById(url)).text(content);
+				}
+			},
+			error: function(object, error) {
+				console.log("Error: " + error.code + " " + error.message);
+			}
+		});
+
+	});
+}
+
+function addCount(Counter) {
+	var Counter = AV.Object.extend("Counter");
+	url = $(".leancloud_visitors").attr('id').trim();
+	title = $(".leancloud_visitors").attr('data-flag-title').trim();
+	var query = new AV.Query(Counter);
+	query.equalTo("url", url);
+	query.find({
+		success: function(results) {
+			if (results.length > 0) {
+				var counter = results[0];
+				counter.fetchWhenSave(true);
+				counter.increment("time");
+				counter.save(null, {
+					success: function(counter) {
+						var content =  counter.get('time') + ' ' + $(document.getElementById(url)).text();
+						$(document.getElementById(url)).text(content);
+					},
+					error: function(counter, error) {
+						console.log('Failed to save Visitor num, with error message: ' + error.message);
+					}
+				});
+			} else {
+				var newcounter = new Counter();
+				newcounter.set("title", title);
+				newcounter.set("url", url);
+				newcounter.set("time", 1);
+				newcounter.save(null, {
+					success: function(newcounter) {
+					    console.log("newcounter.get('time')="+newcounter.get('time'));
+						var content = newcounter.get('time') + ' ' + $(document.getElementById(url)).text();
+						$(document.getElementById(url)).text(content);
+					},
+					error: function(newcounter, error) {
+						console.log('Failed to create');
+					}
+				});
+			}
+		},
+		error: function(error) {
+			console.log('Error:' + error.code + " " + error.message);
+		}
+	});
+}
+$(function() {
+	var Counter = AV.Object.extend("Counter");
+	if ($('.leancloud_visitors').length == 1) {
+		addCount(Counter);
+	} else if ($('.post-title-link').length > 1) {
+		showTime(Counter);
+	}
+}); 
+</script>
+
+
+</body>
+</html>
